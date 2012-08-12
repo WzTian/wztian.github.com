@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="Blacksmith is a static site generator." />
     <meta name="keywords" />
-    <title>arch-netcat-slimv-mit-schemeBlacksmith</title>
+    <title>Blogging with BlacksmithBlacksmith</title>
     <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
     <link rel="stylesheet" href="/css/application.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/blacksmith.css" type="text/css" />
@@ -27,21 +27,37 @@
           </div>
           <div class="sidebar-node if-date">
             <h2>Article Publish Date:</h2>
-            <strong class="date">Monday, Dec 19 2011</strong>
+            <strong class="date">Saturday, Aug 11 2012</strong>
           </div>
           <div class="sidebar-node if-byThisAuthor">
             <h2>More Articles By This Author</h2>
-            <nav class="byThisAuthor"><ul><li><a href="/blogging-with-blacksmith">blogging with blacksmith</a></li><li><a href="/halting-problem">halting problem</a></li><li><a href="/monty-hall-problem">monty hall problem</a></li><li><a href="/army-of-shadows">army of shadows</a></li><li><a href="/new-look-for-blog">new look for blog</a></li><li><a href="/tree-of-life">tree of life</a></li><li><a href="/rosetta">rosetta</a></li><li><a href="/qmmp-cpu-cue-encoding">qmmp cpu cue encoding</a></li><li><a href="/taste-of-cherry">taste of cherry</a></li><li><a href="/chakra-linux">chakra linux</a></li><li><a href="/symbiopsychotaxiplasma">symbiopsychotaxiplasma</a></li></ul></nav>
+            <nav class="byThisAuthor"><ul><li><a href="/army-of-shadows">army of shadows</a></li></ul></nav>
           </div>
         </div>
         <div id="page">
 
           <article class="article">
-            <h1 class="title"><a href="./arch-netcat-slimv-mit-scheme">arch-netcat-slimv-mit-scheme</a></h1>
-            <div class="content"><h1>arch netcat slimv mit-scheme</h1>
-<p>slimv 的 mit-scheme支持要用到netcat的bsd版本，而arch里netcat-openbsd
-这个包，安装之后生成的二进制文件名是nc.openbsd,因此要修改 <code>~<span class="regexp">/.vim/slime</span><span class="regexp">/contrib/swank</span>-<span class="identifier">mit</span>-<span class="identifier">scheme</span>.<span class="identifier">scm</span></code>
-的116行为 <code>(<span class="identifier">cmd</span> (<span class="identifier"><span class="keymethods">format</span></span> <span class="comment">#f "exec nc.openbsd -v -q 0 -l ~a 2&gt;&amp;1" port))</span></code>
+            <h1 class="title"><a href="./blogging-with-blacksmith">Blogging with Blacksmith</a></h1>
+            <div class="content"><p>主力编辑器换成emacs之后，再用vimwiki写博客就觉得十分残念，所以博客就这么长草了，
+<del>才不是人家懒呢！</del> 之前看到octopress十分流行，也想过试一试，但是由于
+其依赖的ruby版本旧于arch自带，我又懒得折腾rvm什么的，就无限期的放了下来。
+
+</p>
+<p>前几天听到了 <a href="http://codeacademy.com">http://codeacademy.com</a> 推出了python课程，我去围观之余，就在上面开始
+了javascript的学习。<del>好混乱</del> 由于期末project是用python写一个scheme解释器，
+加之自己一直对lisp有好感，看到js里穿上<code>function</code>马甲的lambda就觉得十分亲切。于是
+之果断抛弃了一直想研究却看着就绝望的<a href="http://hyde.github.com/">Hyde</a>，在众多的
+基于node.js的static site generator中选了一个貌似比较简单，默认页面也不那么寒碜的
+<a href="http://blacksmith.jit.su/">Blacksmith</a>。今天写好了blacksmith 和 emacs 的整合
+<a href="https://github.com/WzTian/blacksmith-emacs">Github</a> 之后，又手动把几篇博客转成markdown
+（工作量真心不大），
+于是就安心的把原来的博客撤下来了，以后vimwiki纯粹记笔记用，毕竟能在vim里直接跟随
+链接还是很不错的。
+
+</p>
+<hr />
+<p>新博客虽然带不来新学期新的开始什么的，也总是一个好玩具，就祝自己玩的愉快吧！
+<del>虽然看着新学期的课表觉得没什么时间可以来玩……</del>
 </p>
 </div>
           </article>
