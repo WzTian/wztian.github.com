@@ -1,0 +1,96 @@
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Blacksmith is a static site generator." />
+    <meta name="keywords" content="linux" />
+    <title>qmmp-cpu-cue-encodingBlacksmith</title>
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <link rel="stylesheet" href="/css/application.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/blacksmith.css" type="text/css" />
+
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <h1 class="blog_title"><a href="/">WzTian's Nest</a></h1>
+      </header>
+      <div class="metadata">
+        <div id="sidebar" style="margin-bottom: 32px;">
+          <div class="sidebar-node author">
+            <h2>About This Author:</h2>
+            <ul>
+              <li><strong>Name: </strong><span class="name">Weizhi Tian</span></li>
+              <li class="if-github"><strong>Github: </strong><span class="github"><a href="https://github.com/WzTian">WzTian</a></span></li>
+              <li class="if-twitter"><strong>Twitter: </strong><span class="twitter"><a href="https://twitter.com/WzTIan">WzTIan</a></span></li>
+            </ul>
+          </div>
+          <div class="sidebar-node if-date">
+            <h2>Article Publish Date:</h2>
+            <strong class="date">Wednesday, Aug 3 2011</strong>
+          </div>
+          <div class="sidebar-node if-byThisAuthor">
+            <h2>More Articles By This Author</h2>
+            <nav class="byThisAuthor"><ul><li><a href="/monty-hall-problem">monty hall problem</a></li><li><a href="/army-of-shadows">army of shadows</a></li><li><a href="/new-look-for-blog">new look for blog</a></li><li><a href="/taste-of-cherry">taste of cherry</a></li><li><a href="/symbiopsychotaxiplasma">symbiopsychotaxiplasma</a></li></ul></nav>
+          </div>
+        </div>
+        <div id="page">
+
+          <article class="article">
+            <h1 class="title"><a href="./qmmp-cpu-cue-encoding">qmmp-cpu-cue-encoding</a></h1>
+            <div class="content"><h1>qmmp cpu 占用与.cue 转码</h1>
+<h2>qmmp cpu</h2>
+<p>调教前，播放时 cpu 占用60%~80%,暂停时在10%上下。
+
+</p>
+<p>具体操作：
+- 在 src 插件的参数设置中选线性插入。
+- 在 <code>/usr/share/applications/qmmp.desktop</code> 中的 Exec 项中写入 <code>export QT_NO_GLIB=1;qmmp %F</code>
+
+</p>
+<p>现播放时 cpu 占用 稳定10%以下。
+
+</p>
+<h2>转码 .cue 的 python 脚本</h2>
+<p>闲着没事写了一个，初步测试能用。
+</p>
+<pre><code class="python">#!/usr/bin/python
+# Filename newconvert.py
+
+import os
+import fnmatch
+
+cuepath = raw_input('The path where the \'.cue\' files are:')
+incode = raw_input('Original encoding:')
+outcode = raw_input('Output encoding:')
+for root, dirs, files in os.walk(cuepath):
+    print 'Working in %s.' % root
+    for file in files:
+        if fnmatch.fnmatch(file, '*.cue'):
+            full_file_path = os.join.path(root,file)
+            command = 'iconv -f %s -t %s -cs %s &gt; %s' %(incode,outcode,full_file_path,full_file_path)
+            try:
+                os.system(command)
+                print 'Converted %s' % file
+            except OSError: 
+                print 'Oops, Permission denied for %s' % file
+            else :
+                print 'Something went wrong and I have no idea why'</code></pre>
+</div>
+          </article>
+
+          <script type="text/javascript" src="/js/jquery.js"></script>
+        </div>
+
+        <footer id="footer">
+          <hr />
+          <p><a href="/">Blacksmith</a></p>
+          <ul>
+            <li>Powered by <a href="http://nodejitsu.com">Nodejitsu</a> / styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a></li>
+          </ul>
+        </footer>
+
+      </div>
+    </div>
+  </body>
+</html>

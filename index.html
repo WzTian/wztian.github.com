@@ -1,0 +1,496 @@
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Blacksmith is a static site generator." />
+    <meta name="keywords" />
+    <title>Blacksmith</title>
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <link rel="stylesheet" href="/css/application.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/blacksmith.css" type="text/css" />
+
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <h1 class="blog_title"><a href="/">WzTian's Nest</a></h1>
+      </header>
+
+      <div id="sidebar">
+        <div id="sidebar-node">
+          <h2>More Articles</h2>
+          <nav id="toc"><li><a href="/halting-problem">halting problem</a></li><li><a href="/arch-netcat-slimv-mit-scheme">arch netcat slimv mit scheme</a></li><li><a href="/no-title">no title</a></li><li><a href="/monty-hall-problem">monty hall problem</a></li><li><a href="/army-of-shadows">army of shadows</a></li><li><a href="/new-look-for-blog">new look for blog</a></li><li><a href="/tree-of-life">tree of life</a></li><li><a href="/rosetta">rosetta</a></li><li><a href="/qmmp-cpu-cue-encoding">qmmp cpu cue encoding</a></li><li><a href="/taste-of-cherry">taste of cherry</a></li><li><a href="/chakra-linux">chakra linux</a></li><li><a href="/symbiopsychotaxiplasma">symbiopsychotaxiplasma</a></li></nav>
+        </div>
+      </div>
+      <div id="page">
+
+        
+
+        <article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./halting-problem">Halting-Problem</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Thursday, Mar 8 2012</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><p>在Matrix67的博客上看到了一篇讲这个的博文 <a href="http://www.matrix67.com/blog/archives/55">http://www.matrix67.com/blog/archives/55</a> 
+想到上学期离散数学讲过这个问题，就尝试一下用更简单的语言介绍一下。
+
+</p>
+<p>这个证明是由伟大的图灵先生提出的。
+
+</p>
+<p>首先，我们最终想要证明的一点是，世界上存在不能用算法解出的问题，更明确的说，
+存在不能用算法（某种固定的计算过程）解决的数学问题。
+
+</p>
+<p>要证明这个，构造一个这样的问题就好了。我们选择的问题就是：“确定一段程序是否会永远运行”。
+
+</p>
+<p>首先假定解决这个问题的算法已经被发明出来了，用一个函数f，接受两个参数：1.被研究的某段程序
+2.这个程序运行时所接受的输入。这两个参数决定了程序的运行过程。如果程序会永远运行，f返回“真”，
+否则返回“假”。
+
+</p>
+<p>然后，我们利用这个函数写一个程序，读入一段代码，并设计一个while循环：
+如果f返回“真”，则程序停止，如果f返回“假”，则程序不断循环。
+
+</p>
+<p>现在，填入f的两个参数，并把二者都设为读入的那段代码。
+
+</p>
+<p>现在，运行这段程序，并输入其自身这段代码。这样的话，如果这段代码会无限循环，则f将返回“真”，从而这段
+代码将停止运行，构成矛盾；如果这段代码不会无限循环，则f返回“假”，代码无限循环，亦是矛盾。
+
+</p>
+<p>矛盾的存在说明我们的假设出现问题，解决这个问题的算法必定不存在。
+
+</p>
+<p>QED
+
+</p>
+<hr />
+<p>那么一小段代码，换成文字变成这么一堆，所以说还是formal language好么。
+
+</p>
+</div>
+          <a href="./halting-problem" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./arch-netcat-slimv-mit-scheme">arch-netcat-slimv-mit-scheme</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Monday, Dec 19 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><h1>arch netcat slimv mit-scheme</h1>
+<p>slimv 的 mit-scheme支持要用到netcat的bsd版本，而arch里netcat-openbsd
+这个包，安装之后生成的二进制文件名是nc.openbsd,因此要修改 <code>~<span class="regexp">/.vim/slime</span><span class="regexp">/contrib/swank</span>-<span class="identifier">mit</span>-<span class="identifier">scheme</span>.<span class="identifier">scm</span></code>
+的116行为 <code>(<span class="identifier">cmd</span> (<span class="identifier"><span class="keymethods">format</span></span> <span class="comment">#f "exec nc.openbsd -v -q 0 -l ~a 2&gt;&amp;1" port))</span></code>
+</p>
+</div>
+          <a href="./arch-netcat-slimv-mit-scheme" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./no-title">No-Title</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Friday, Nov 25 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><h1>电影还可以这样拍</h1>
+<p>有一个不知真假的小段子，说是加西亚 马尔克斯读了变形记的第一句：
+“格里格早上起来，变成了一只甲虫。”，立即拍桌大叫：“XX，
+小说还可以这么写！”然后，就写出了百年孤独……
+
+</p>
+<p>我还不至于狂妄到把自己当成马氏那等人物，可见的将来里也不会
+从事电影创作，但在看过的近百部好电影里面，还真是有几部让我发出
+了类似马氏的感慨，在此就向大家分享一下。
+
+</p>
+
+
+
+
+
+
+
+
+
+
+</div>
+          <a href="./no-title" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./monty-hall-problem">Monty-Hall-Problem</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Thursday, Oct 20 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><h1>三门问题</h1>
+<p>Monty Hall 问题，是从美国的一个game show "Let's Make a Deal"里的游戏环节产生的。主持人Monty Hall
+给出三扇门，两扇后面啥也没有，但另一扇后面放的是游戏大奖。被蒙在鼓里的参赛选手要在三扇
+中选择一扇，选完了之后，Monty Hall先生把剩下两扇门中没有奖品的一扇（如果两扇都没有，就任选一扇）打开，
+然后问选手要不要改变他的选择。
+
+</p>
+<p>要么？
+
+</p>
+<p>英俊潇洒的Monty Hall
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292619984/" title="monty by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6092/6292619984_00e4d9bfb9_z.jpg" width="431" height="591" alt="monty" /></a>
+
+</p>
+<p>要的！
+
+</p>
+<p>如果已经明白的话，下面的证明可以不看了。如果和迟钝的我当初一样有点惊讶的话就继续读吧。
+
+</p>
+<p>假设选手铁定要改变选择，那么决定他得不得奖的唯一因素就是他最初的选择是不是正确的。如果一开始选对了，就会输掉，如果一开始
+选的不对，则必定要赢。显然，第一次选对的概率是<code>1/3</code>，选错的概率是<code>2/3</code>，所以在改变选择的情况下，得奖的概率是<code>2/3</code>。
+
+</p>
+<p>如果选手不改变选择的话，那他第一次选对就赢，否则就输，得奖的概率是<code>1/3</code>。
+
+</p>
+<p>逻辑理一遍，是不是就清楚了呢？如果还觉得这个游戏应该是完全随机的话，请注意Monty先生（其实应该是Mr.Hall(·_·)）所做的选择并不是
+随机的，如果他随机打开一扇门的话，有<code>1/3</code>的可能直接打开有奖的门，另外<code>2/3</code>中，恰有一半情况选手在第一步选择了正确的门，换不换门，
+此时就不影响得奖的概率了（都是<code>1/3</code>）。
+
+</p>
+<p>写这么简单的东西，是不是浪费大家时间了呢……
+
+
+</p>
+</div>
+          <a href="./monty-hall-problem" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./army-of-shadows">army-of-shadows</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Friday, Oct 14 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><p><del>音乐要用chrome才能听，火狐对不住了。</del>
+
+</p>
+<iframe frameborder="0" height="100" width="60%" src="http://min.us/mIhj81jsT#1e"></iframe>
+
+<p>"L'armée des ombres"，译名影子军队，是Jean-Pierre Melville的晚期作品，讲的是二战维希法国地下抵抗运动的故事。
+
+</p>
+<p>这样一个比较主旋律的故事，人物塑造是很大的挑战。既不能因戏说而破坏了历史的真实，又要小心人物的个性被历史的背景吞没。
+Melville在这点上做的好过我之前看过的任一部战争片的导演。而他所用的工具就是独白，一小段一小段心灵的倾诉被赋予了诗的意境，
+乐的节律，让我们得以窥见那些影子中的刚硬身形同我们一样柔软而敏感的内心世界，与他们在苦难与黑暗中同生共息。
+
+</p>
+<p>Melville在本片中采用了有主有次的多视角叙事。虽然全片的主角无疑是Lino Ventura饰演的Philippe Gerbier，但每个稍有戏份的配角，
+都有以其为第一视角的小段落。更有甚者，在营救Félix的片段，营救者一队采用了Mathilde （Simone Signoret 饰演）为主视角，
+牢房内则采用了自我牺牲，潜入死牢报信的Jean-François Jardie （Jean-Pierre Cassel饰演）为主视角。虽然本段大部分时间是营救队与
+德军斗智斗勇，但François还是获得了一个内心闪回的特写，这一场的刻画重点，最终也落脚到François 与 Félix 的友情。这样的叙事结构，
+对于那些要求一部电影讲一个完整故事的观众来说，是不太容易接受的，但从塑造人物的角度看来，给了每一个角色丰满自己的机会，
+避免了在描绘群像时的人物同质化或卡通化（请读者自行参考《建党大业》）。同时，这种灵动的结构，也与本片散文诗般的气质相得益彰，
+形成了在战争电影里少见的韵律美。
+
+</p>
+<p>讨论历史的片子，现实化与戏剧化似乎是永远的矛盾。Melville 在本片里另辟蹊径，将历史诗化，不用离奇的剧情代替历史之真相
+（如Inglourious Basterds），不用宏大的场面“还原”战争的残酷，而是用相对个人化的叙述，把战争里人们的心路历程，借抵抗运动
+这一矛盾最为激烈的载体，细细道来。在这样的设定里，一个完整的故事不是必需的，观众所需要做的，就是顺着Melville的引导，
+用自己的灵魂，体会那个年代的残酷与美丽。
+
+</p>
+<p>本片1969年拍摄完成时，恰逢法国国内对戴高乐不满情绪上扬，法国民众对这部影片的主题很不待见，导致该片最终未能走出法国国门。
+直到2006年，本片才为英美观众得见，并被多方评为2006年十佳电影之一。1973年去世的Melville地下有知，大概要高兴他的一部杰作
+毕竟没有为时代的偏见所埋没。
+
+</p>
+<hr />
+<p>片子开头这一个长镜头，一队德军走过凯旋门。镜头从德军远远走来，到士兵走到镜头跟前，才淡出，“入侵”的表达再明显不过。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292098245/" title="shot0011 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6032/6292098245_1c7c106d27.jpg" width="500" height="272" alt="shot0011" /></a>
+<a href="http://www.flickr.com/photos/twzh_ly01/6292618698/" title="shot0013 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6047/6292618698_b56c838b24.jpg" width="500" height="272" alt="shot0013" /></a>
+
+</p>
+<p>片尾，一行人开车离去，远处凯旋门的身影下有一个德军士兵。汽车转弯，士兵转瞬而逝。沦丧的日子虽然黑暗，也终要在历史的转弯处，
+被留在背影里。谨在此纪念那些未能等到黑暗结束的人们。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292619116/" title="shot0018 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6113/6292619116_f6351feee2.jpg" width="500" height="272" alt="shot0018" /></a>
+<a href="http://www.flickr.com/photos/twzh_ly01/6292619368/" title="shot0022 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6034/6292619368_62d440fef9.jpg" width="500" height="272" alt="shot0022" /></a>
+<a href="http://www.flickr.com/photos/twzh_ly01/6292619832/" title="shot0024 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6219/6292619832_e32f1c69d6.jpg" width="500" height="272" alt="shot0024" /></a>
+
+</p>
+<hr />
+<p>感谢@CSSlayer的fcitx-fbterm，让我在KDE发飙的情况下在控制台写了这篇评论。
+
+</p>
+</div>
+          <a href="./army-of-shadows" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./new-look-for-blog">New-Look-For-Blog</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Friday, Oct 7 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><h1>博客变样子了！！！</h1>
+<p>之前一直懒着，博客的style.css（就是一种控制网页外观的东西）基本保持在默认状态，其实每次看到那个光突突的首页都觉得
+审美收到严重冲击，但要改就要新学一些css语法，以课业忙为理由~~借口~~就一直没管它。今天作业相对不多，也不是太有心情写，
+就对它痛下了杀手……
+
+</p>
+<p><del><a href="http://www.w3cschools.com">http://www.w3cschools.com</a> [这个官方的教学网站] 真是太棒了，
+露凡（或者某些不幸误入我博客的同学）什么时候想学网页设计
+啥的，不用舍近求远地买什么书了，简单（或者不那么简单）的技巧上面都有，
+还有互动练习，而且保证学到的都是最标准的哦！</del>
+
+</p>
+<p>连学带改带试，一共俩小时，用这个vimwiki不好在你不能动.html源文件
+（就是网页的页面文件，以免某人说这是天书……），不能自如
+的用class这些东西，只能就着一个style.css可劲的改，
+有些我想实现的东西因此没能做成（比如把整段文章放在一个半透明背景之中，
+很可能有简单的办法，是我太弱）。
+但有些效果还是满好玩的（其实可能加了太多鼠标hover的效果了……就是因为觉得好玩……）。
+
+</p>
+<p>为什么是黑乎乎的呢？当然为了是表现我们色盲的独特魅力了！
+不喜欢的话，<del> 可以从现在开始，苦练电脑技术，成为超级黑客，入侵github，~~
+~~把我的style.css改过来。</del> 只好慢慢适应了……
+
+</p>
+<p>不说了，做数学了。
+
+</p>
+<hr />
+<p>对了 <strong>不要用IE看我的博客</strong> ！！看到的效果乱七八糟我不负任何责任的！！（好吧，可能本来也不是很好看，但用IE还是会有毁灭性效果的）
+
+
+
+</p>
+</div>
+          <a href="./new-look-for-blog" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./tree-of-life">Tree-of-life</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Friday, Sep 2 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><p>这是我在异国他乡看的第一部电影，也是我看的第一部 Terrance Malick 电影。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292097935/" title="treeoflife by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6097/6292097935_ba79a06c8a.jpg" width="318" height="500" alt="treeoflife" /></a>
+
+</p>
+<p>本片从一个男孩的死亡入手探讨生命，以多人物心理独白的方式缓缓抛出了"To live is to love."的命题。
+
+</p>
+<p>Malick 想讨论的生命，显然不是每个人短暂的这几十年，而是宏观上生命从无机物生发而灿烂的奇迹。
+三十五亿年前，海洋中无机的分子迸出了第一星生命的火花;三十五亿年后，任一个生命还是无法逃脱
+凋亡的宿命。种种社会角色到底只是一种错觉，在人生两端，我们只是自己。
+
+</p>
+<p>摄影上，大量的跳接和运动摄影传达出生命的律动感。古典音乐的配乐与摄影结合相当完美，在大段大段没有台词甚至没有人物
+的画面里为情绪的发展起到了主要的推动作用。
+
+</p>
+</div>
+          <a href="./tree-of-life" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./rosetta">rosetta</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Tuesday, Aug 23 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><p>Rosetta的悲剧，不在于生活的困境令其无法生存，而是在于其想像对现实的拒绝。
+
+</p>
+<p>快速的镜头映照着Rosetta内心的焦虑。她对于“正常生活”的追求只是对于边缘化现实的心理补偿。
+
+</p>
+<p>可怜之人必有可恨之处。这句话放到这里，倒也合适。
+
+</p>
+<p>本来该多说一些，只是这是一部想想都让人难受的电影。
+
+
+</p>
+</div>
+          <a href="./rosetta" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./qmmp-cpu-cue-encoding">qmmp-cpu-cue-encoding</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Wednesday, Aug 3 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><h1>qmmp cpu 占用与.cue 转码</h1>
+
+
+
+
+
+
+
+</div>
+          <a href="./qmmp-cpu-cue-encoding" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./taste-of-cherry">taste-of-cherry</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Sunday, Jul 31 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><p><em>The Taste of Cherry</em> 是我看的第一部阿巴斯 基亚罗斯塔米的作品，虽然被一小段错误的剧透所误导，整个观影过程还是很美妙的。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292097047/" title="shot0008 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6214/6292097047_80ec3d32ce.jpg" width="500" height="286" alt="shot0008" /></a>
+
+</p>
+<p>影片中三位乘车者的段落相似而又各有妙处。第一段主角在对士兵的试探中向观众揭开了其行为的动机，重点在于“诱拐”的过程中悬念的构建
+。第二段中则是单刀直入地展开了关于自杀的哲学讨论，作用在于刻画主角的心理。第三段直接省略了主角说服乘客的过程，在乘客接受条件的
+基础上展开了一段关于生之美好的独白。三段结构上的变化使电影的节奏灵动而不散乱，均衡而不单调。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292617024/" title="shot0009 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6220/6292617024_68163aeb3b.jpg" width="500" height="286" alt="shot0009" /></a>
+
+</p>
+<p>本片的主角与其说是选择死亡，不如说是选择不去选择。是故他虽被第三名乘客燃起了生的渴望，却依然没有勇气去真正做出选择。
+既要逃避自主的抉择又害怕上苍的决定，是其悲哀之处。
+
+</p>
+<p>片尾一段片场记录镜头告诉我们电影不过是虚幻的声光，不能解决问题也不能阐明真理，主角之所以没有结局是因为一个虚构人物的生死本就
+无足轻重，血肉之躯的观者倒是该对生死多一些思考。
+
+</p>
+</div>
+          <a href="./taste-of-cherry" class="readMore">Read more...</a>
+          <hr />
+        </article><article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title"><a href="./chakra-linux">Chakra-Linux</a></span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Weizhi Tian</span>
+                  </strong>
+                </span>
+                <span class="about if-date"> on <em><time class="date">Monday, Jul 18 2011</time></em></span>
+              </small>
+            </h1>
+          </div>
+          <div class="content"><h1>Chakra Linux 安装配置笔记</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+          <a href="./chakra-linux" class="readMore">Read more...</a>
+          <hr />
+        </article><script type="text/javascript" src="/js/jquery.js"></script>
+      </div>
+
+      <footer id="footer">
+        <hr />
+        <p><a href="/">Blacksmith</a></p>
+        <ul>
+          <li>Powered by <a href="http://nodejitsu.com">Nodejitsu</a> / styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a></li>
+        </ul>
+      </footer>
+
+
+    </div>
+  </body>
+</html>

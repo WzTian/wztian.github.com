@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>http://github.com/dylan/node-rss</link><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 12 Aug 2012 04:25:12 GMT</lastBuildDate><atom:link href="/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[<a href="./halting-problem">Halting-Problem</a>]]></title><description><![CDATA[<p>在Matrix67的博客上看到了一篇讲这个的博文 <a href="http://www.matrix67.com/blog/archives/55">http://www.matrix67.com/blog/archives/55</a> 
+想到上学期离散数学讲过这个问题，就尝试一下用更简单的语言介绍一下。
+
+</p>
+<p>这个证明是由伟大的图灵先生提出的。
+
+</p>
+<p>首先，我们最终想要证明的一点是，世界上存在不能用算法解出的问题，更明确的说，
+存在不能用算法（某种固定的计算过程）解决的数学问题。
+
+</p>
+<p>要证明这个，构造一个这样的问题就好了。我们选择的问题就是：“确定一段程序是否会永远运行”。
+
+</p>
+<p>首先假定解决这个问题的算法已经被发明出来了，用一个函数f，接受两个参数：1.被研究的某段程序
+2.这个程序运行时所接受的输入。这两个参数决定了程序的运行过程。如果程序会永远运行，f返回“真”，
+否则返回“假”。
+
+</p>
+<p>然后，我们利用这个函数写一个程序，读入一段代码，并设计一个while循环：
+如果f返回“真”，则程序停止，如果f返回“假”，则程序不断循环。
+
+</p>
+<p>现在，填入f的两个参数，并把二者都设为读入的那段代码。
+
+</p>
+<p>现在，运行这段程序，并输入其自身这段代码。这样的话，如果这段代码会无限循环，则f将返回“真”，从而这段
+代码将停止运行，构成矛盾；如果这段代码不会无限循环，则f返回“假”，代码无限循环，亦是矛盾。
+
+</p>
+<p>矛盾的存在说明我们的假设出现问题，解决这个问题的算法必定不存在。
+
+</p>
+<p>QED
+
+</p>
+<hr />
+<p>那么一小段代码，换成文字变成这么一堆，所以说还是formal language好么。
+
+</p>
+]]></description><link>http://undefined/halting-problem</link><guid isPermaLink="true">http://undefined/halting-problem</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Fri, 09 Mar 2012 04:01:02 GMT</pubDate></item><item><title><![CDATA[<a href="./arch-netcat-slimv-mit-scheme">arch-netcat-slimv-mit-scheme</a>]]></title><description><![CDATA[<h1>arch netcat slimv mit-scheme</h1>
+<p>slimv 的 mit-scheme支持要用到netcat的bsd版本，而arch里netcat-openbsd
+这个包，安装之后生成的二进制文件名是nc.openbsd,因此要修改 <code>~<span class="regexp">/.vim/slime</span><span class="regexp">/contrib/swank</span>-<span class="identifier">mit</span>-<span class="identifier">scheme</span>.<span class="identifier">scm</span></code>
+的116行为 <code>(<span class="identifier">cmd</span> (<span class="identifier"><span class="keymethods">format</span></span> <span class="comment">#f "exec nc.openbsd -v -q 0 -l ~a 2&gt;&amp;1" port))</span></code>
+</p>
+]]></description><link>http://undefined/arch-netcat-slimv-mit-scheme</link><guid isPermaLink="true">http://undefined/arch-netcat-slimv-mit-scheme</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Tue, 20 Dec 2011 04:22:26 GMT</pubDate></item><item><title><![CDATA[<a href="./no-title">No-Title</a>]]></title><description><![CDATA[<h1>电影还可以这样拍</h1>
+<p>有一个不知真假的小段子，说是加西亚 马尔克斯读了变形记的第一句：
+“格里格早上起来，变成了一只甲虫。”，立即拍桌大叫：“XX，
+小说还可以这么写！”然后，就写出了百年孤独……
+
+</p>
+<p>我还不至于狂妄到把自己当成马氏那等人物，可见的将来里也不会
+从事电影创作，但在看过的近百部好电影里面，还真是有几部让我发出
+了类似马氏的感慨，在此就向大家分享一下。
+
+</p>
+<h2>樱桃的滋味</h2>
+<p>怎样用最少的笔墨刻画出浓浓的诗意？阿巴斯在此给你一个答案。
+我每次回老家，车子泡在满是沙尘的荒路上时，脑子里就会琢磨这样一部
+路上的电影，但总觉得脑子里黄沙与引擎声宁静的美，放到胶片上，
+会变成无人可解的杂乱与无聊。阿巴斯几乎拍出了我想象中的一切，
+只少了几分粗砺多了几分诗意。有这样的导演，我可以安下心去
+搞物理了……
+
+</p>
+<h2>天堂陌影</h2>
+<p>这部片子，用两个字来总结就是“无聊”。里面的人物在无聊中延续着
+无聊的情节，填充了一个个无聊而随意的镜头。但他就是有让你恨不得
+90分钟不眨眼盯住屏幕的魔力。我想把贾木许的长镜头比作爵士乐，
+但他的镜头比音符更自由。
+
+</p>
+<h2>共生心理分类学</h2>
+<p>玩非线性么？跟这部片子比起来盗梦就是战斗力只有五的渣渣……
+什么？这是一部六十年代的 <strong>纪录片</strong> ？！诺兰，你不要再吃老本
+了好么……
+
+</p>
+<h2>秋刀鱼之味</h2>
+<p>小津的电影，沉重的打击了我“镜头要动起来才美”的观念。必须
+承认的是，我到现在也不知道为什么他的最普通不过的中景静态镜头
+会有那么强的感染力，只知道他的电影，我是看一次，哭一次。
+
+</p>
+<hr />
+<p>本来想要凑足五个，但想了一想，《安妮霍尔》给我的震撼，一部分
+在于我当时看片还少；《公民凯恩》好的太全面，很多都已被后人吸收；
+《暴雨将至》很巧，但几乎就要太巧了；德帕尔马总是美中不足；
+伯格曼很文学化（怪不得有诺贝尔文学奖提名）；塔可夫斯基没看懂……
+就不做那种没意义的事了，感受是真实的，对我就足够了。读者若不幸
+觉得被浪费掉了五分钟美丽人生，我这里先行致歉。
+
+</p>
+]]></description><link>http://undefined/no-title</link><guid isPermaLink="true">http://undefined/no-title</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sat, 26 Nov 2011 03:52:46 GMT</pubDate></item><item><title><![CDATA[<a href="./monty-hall-problem">Monty-Hall-Problem</a>]]></title><description><![CDATA[<h1>三门问题</h1>
+<p>Monty Hall 问题，是从美国的一个game show "Let's Make a Deal"里的游戏环节产生的。主持人Monty Hall
+给出三扇门，两扇后面啥也没有，但另一扇后面放的是游戏大奖。被蒙在鼓里的参赛选手要在三扇
+中选择一扇，选完了之后，Monty Hall先生把剩下两扇门中没有奖品的一扇（如果两扇都没有，就任选一扇）打开，
+然后问选手要不要改变他的选择。
+
+</p>
+<p>要么？
+
+</p>
+<p>英俊潇洒的Monty Hall
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292619984/" title="monty by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6092/6292619984_00e4d9bfb9_z.jpg" width="431" height="591" alt="monty" /></a>
+
+</p>
+<p>要的！
+
+</p>
+<p>如果已经明白的话，下面的证明可以不看了。如果和迟钝的我当初一样有点惊讶的话就继续读吧。
+
+</p>
+<p>假设选手铁定要改变选择，那么决定他得不得奖的唯一因素就是他最初的选择是不是正确的。如果一开始选对了，就会输掉，如果一开始
+选的不对，则必定要赢。显然，第一次选对的概率是<code>1/3</code>，选错的概率是<code>2/3</code>，所以在改变选择的情况下，得奖的概率是<code>2/3</code>。
+
+</p>
+<p>如果选手不改变选择的话，那他第一次选对就赢，否则就输，得奖的概率是<code>1/3</code>。
+
+</p>
+<p>逻辑理一遍，是不是就清楚了呢？如果还觉得这个游戏应该是完全随机的话，请注意Monty先生（其实应该是Mr.Hall(·_·)）所做的选择并不是
+随机的，如果他随机打开一扇门的话，有<code>1/3</code>的可能直接打开有奖的门，另外<code>2/3</code>中，恰有一半情况选手在第一步选择了正确的门，换不换门，
+此时就不影响得奖的概率了（都是<code>1/3</code>）。
+
+</p>
+<p>写这么简单的东西，是不是浪费大家时间了呢……
+
+
+</p>
+]]></description><link>http://undefined/monty-hall-problem</link><guid isPermaLink="true">http://undefined/monty-hall-problem</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Fri, 21 Oct 2011 03:58:01 GMT</pubDate></item><item><title><![CDATA[<a href="./army-of-shadows">army-of-shadows</a>]]></title><description><![CDATA[<p><del>音乐要用chrome才能听，火狐对不住了。</del>
+
+</p>
+<iframe frameborder="0" height="100" width="60%" src="http://min.us/mIhj81jsT#1e"></iframe>
+
+<p>"L'armée des ombres"，译名影子军队，是Jean-Pierre Melville的晚期作品，讲的是二战维希法国地下抵抗运动的故事。
+
+</p>
+<p>这样一个比较主旋律的故事，人物塑造是很大的挑战。既不能因戏说而破坏了历史的真实，又要小心人物的个性被历史的背景吞没。
+Melville在这点上做的好过我之前看过的任一部战争片的导演。而他所用的工具就是独白，一小段一小段心灵的倾诉被赋予了诗的意境，
+乐的节律，让我们得以窥见那些影子中的刚硬身形同我们一样柔软而敏感的内心世界，与他们在苦难与黑暗中同生共息。
+
+</p>
+<p>Melville在本片中采用了有主有次的多视角叙事。虽然全片的主角无疑是Lino Ventura饰演的Philippe Gerbier，但每个稍有戏份的配角，
+都有以其为第一视角的小段落。更有甚者，在营救Félix的片段，营救者一队采用了Mathilde （Simone Signoret 饰演）为主视角，
+牢房内则采用了自我牺牲，潜入死牢报信的Jean-François Jardie （Jean-Pierre Cassel饰演）为主视角。虽然本段大部分时间是营救队与
+德军斗智斗勇，但François还是获得了一个内心闪回的特写，这一场的刻画重点，最终也落脚到François 与 Félix 的友情。这样的叙事结构，
+对于那些要求一部电影讲一个完整故事的观众来说，是不太容易接受的，但从塑造人物的角度看来，给了每一个角色丰满自己的机会，
+避免了在描绘群像时的人物同质化或卡通化（请读者自行参考《建党大业》）。同时，这种灵动的结构，也与本片散文诗般的气质相得益彰，
+形成了在战争电影里少见的韵律美。
+
+</p>
+<p>讨论历史的片子，现实化与戏剧化似乎是永远的矛盾。Melville 在本片里另辟蹊径，将历史诗化，不用离奇的剧情代替历史之真相
+（如Inglourious Basterds），不用宏大的场面“还原”战争的残酷，而是用相对个人化的叙述，把战争里人们的心路历程，借抵抗运动
+这一矛盾最为激烈的载体，细细道来。在这样的设定里，一个完整的故事不是必需的，观众所需要做的，就是顺着Melville的引导，
+用自己的灵魂，体会那个年代的残酷与美丽。
+
+</p>
+<p>本片1969年拍摄完成时，恰逢法国国内对戴高乐不满情绪上扬，法国民众对这部影片的主题很不待见，导致该片最终未能走出法国国门。
+直到2006年，本片才为英美观众得见，并被多方评为2006年十佳电影之一。1973年去世的Melville地下有知，大概要高兴他的一部杰作
+毕竟没有为时代的偏见所埋没。
+
+</p>
+<hr />
+<p>片子开头这一个长镜头，一队德军走过凯旋门。镜头从德军远远走来，到士兵走到镜头跟前，才淡出，“入侵”的表达再明显不过。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292098245/" title="shot0011 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6032/6292098245_1c7c106d27.jpg" width="500" height="272" alt="shot0011" /></a>
+<a href="http://www.flickr.com/photos/twzh_ly01/6292618698/" title="shot0013 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6047/6292618698_b56c838b24.jpg" width="500" height="272" alt="shot0013" /></a>
+
+</p>
+<p>片尾，一行人开车离去，远处凯旋门的身影下有一个德军士兵。汽车转弯，士兵转瞬而逝。沦丧的日子虽然黑暗，也终要在历史的转弯处，
+被留在背影里。谨在此纪念那些未能等到黑暗结束的人们。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292619116/" title="shot0018 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6113/6292619116_f6351feee2.jpg" width="500" height="272" alt="shot0018" /></a>
+<a href="http://www.flickr.com/photos/twzh_ly01/6292619368/" title="shot0022 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6034/6292619368_62d440fef9.jpg" width="500" height="272" alt="shot0022" /></a>
+<a href="http://www.flickr.com/photos/twzh_ly01/6292619832/" title="shot0024 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6219/6292619832_e32f1c69d6.jpg" width="500" height="272" alt="shot0024" /></a>
+
+</p>
+<hr />
+<p>感谢@CSSlayer的fcitx-fbterm，让我在KDE发飙的情况下在控制台写了这篇评论。
+
+</p>
+]]></description><link>http://undefined/army-of-shadows</link><guid isPermaLink="true">http://undefined/army-of-shadows</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sat, 15 Oct 2011 03:46:28 GMT</pubDate></item><item><title><![CDATA[<a href="./new-look-for-blog">New-Look-For-Blog</a>]]></title><description><![CDATA[<h1>博客变样子了！！！</h1>
+<p>之前一直懒着，博客的style.css（就是一种控制网页外观的东西）基本保持在默认状态，其实每次看到那个光突突的首页都觉得
+审美收到严重冲击，但要改就要新学一些css语法，以课业忙为理由~~借口~~就一直没管它。今天作业相对不多，也不是太有心情写，
+就对它痛下了杀手……
+
+</p>
+<p><del><a href="http://www.w3cschools.com">http://www.w3cschools.com</a> [这个官方的教学网站] 真是太棒了，
+露凡（或者某些不幸误入我博客的同学）什么时候想学网页设计
+啥的，不用舍近求远地买什么书了，简单（或者不那么简单）的技巧上面都有，
+还有互动练习，而且保证学到的都是最标准的哦！</del>
+
+</p>
+<p>连学带改带试，一共俩小时，用这个vimwiki不好在你不能动.html源文件
+（就是网页的页面文件，以免某人说这是天书……），不能自如
+的用class这些东西，只能就着一个style.css可劲的改，
+有些我想实现的东西因此没能做成（比如把整段文章放在一个半透明背景之中，
+很可能有简单的办法，是我太弱）。
+但有些效果还是满好玩的（其实可能加了太多鼠标hover的效果了……就是因为觉得好玩……）。
+
+</p>
+<p>为什么是黑乎乎的呢？当然为了是表现我们色盲的独特魅力了！
+不喜欢的话，<del> 可以从现在开始，苦练电脑技术，成为超级黑客，入侵github，~~
+~~把我的style.css改过来。</del> 只好慢慢适应了……
+
+</p>
+<p>不说了，做数学了。
+
+</p>
+<hr />
+<p>对了 <strong>不要用IE看我的博客</strong> ！！看到的效果乱七八糟我不负任何责任的！！（好吧，可能本来也不是很好看，但用IE还是会有毁灭性效果的）
+
+
+
+</p>
+]]></description><link>http://undefined/new-look-for-blog</link><guid isPermaLink="true">http://undefined/new-look-for-blog</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sat, 08 Oct 2011 04:19:08 GMT</pubDate></item><item><title><![CDATA[<a href="./tree-of-life">Tree-of-life</a>]]></title><description><![CDATA[<p>这是我在异国他乡看的第一部电影，也是我看的第一部 Terrance Malick 电影。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292097935/" title="treeoflife by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6097/6292097935_ba79a06c8a.jpg" width="318" height="500" alt="treeoflife" /></a>
+
+</p>
+<p>本片从一个男孩的死亡入手探讨生命，以多人物心理独白的方式缓缓抛出了"To live is to love."的命题。
+
+</p>
+<p>Malick 想讨论的生命，显然不是每个人短暂的这几十年，而是宏观上生命从无机物生发而灿烂的奇迹。
+三十五亿年前，海洋中无机的分子迸出了第一星生命的火花;三十五亿年后，任一个生命还是无法逃脱
+凋亡的宿命。种种社会角色到底只是一种错觉，在人生两端，我们只是自己。
+
+</p>
+<p>摄影上，大量的跳接和运动摄影传达出生命的律动感。古典音乐的配乐与摄影结合相当完美，在大段大段没有台词甚至没有人物
+的画面里为情绪的发展起到了主要的推动作用。
+
+</p>
+]]></description><link>http://undefined/tree-of-life</link><guid isPermaLink="true">http://undefined/tree-of-life</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sat, 03 Sep 2011 03:45:00 GMT</pubDate></item><item><title><![CDATA[<a href="./rosetta">rosetta</a>]]></title><description><![CDATA[<p>Rosetta的悲剧，不在于生活的困境令其无法生存，而是在于其想像对现实的拒绝。
+
+</p>
+<p>快速的镜头映照着Rosetta内心的焦虑。她对于“正常生活”的追求只是对于边缘化现实的心理补偿。
+
+</p>
+<p>可怜之人必有可恨之处。这句话放到这里，倒也合适。
+
+</p>
+<p>本来该多说一些，只是这是一部想想都让人难受的电影。
+
+
+</p>
+]]></description><link>http://undefined/rosetta</link><guid isPermaLink="true">http://undefined/rosetta</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Wed, 24 Aug 2011 03:42:51 GMT</pubDate></item><item><title><![CDATA[<a href="./qmmp-cpu-cue-encoding">qmmp-cpu-cue-encoding</a>]]></title><description><![CDATA[<h1>qmmp cpu 占用与.cue 转码</h1>
+<h2>qmmp cpu</h2>
+<p>调教前，播放时 cpu 占用60%~80%,暂停时在10%上下。
+
+</p>
+<p>具体操作：
+- 在 src 插件的参数设置中选线性插入。
+- 在 <code>/usr/share/applications/qmmp.desktop</code> 中的 Exec 项中写入 <code>export QT_NO_GLIB=1;qmmp %F</code>
+
+</p>
+<p>现播放时 cpu 占用 稳定10%以下。
+
+</p>
+<h2>转码 .cue 的 python 脚本</h2>
+<p>闲着没事写了一个，初步测试能用。
+</p>
+<pre><code class="python">#!/usr/bin/python
+# Filename newconvert.py
+
+import os
+import fnmatch
+
+cuepath = raw_input('The path where the \'.cue\' files are:')
+incode = raw_input('Original encoding:')
+outcode = raw_input('Output encoding:')
+for root, dirs, files in os.walk(cuepath):
+    print 'Working in %s.' % root
+    for file in files:
+        if fnmatch.fnmatch(file, '*.cue'):
+            full_file_path = os.join.path(root,file)
+            command = 'iconv -f %s -t %s -cs %s &gt; %s' %(incode,outcode,full_file_path,full_file_path)
+            try:
+                os.system(command)
+                print 'Converted %s' % file
+            except OSError: 
+                print 'Oops, Permission denied for %s' % file
+            else :
+                print 'Something went wrong and I have no idea why'</code></pre>
+]]></description><link>http://undefined/qmmp-cpu-cue-encoding</link><guid isPermaLink="true">http://undefined/qmmp-cpu-cue-encoding</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Thu, 04 Aug 2011 04:14:39 GMT</pubDate></item><item><title><![CDATA[<a href="./taste-of-cherry">taste-of-cherry</a>]]></title><description><![CDATA[<p><em>The Taste of Cherry</em> 是我看的第一部阿巴斯 基亚罗斯塔米的作品，虽然被一小段错误的剧透所误导，整个观影过程还是很美妙的。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292097047/" title="shot0008 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6214/6292097047_80ec3d32ce.jpg" width="500" height="286" alt="shot0008" /></a>
+
+</p>
+<p>影片中三位乘车者的段落相似而又各有妙处。第一段主角在对士兵的试探中向观众揭开了其行为的动机，重点在于“诱拐”的过程中悬念的构建
+。第二段中则是单刀直入地展开了关于自杀的哲学讨论，作用在于刻画主角的心理。第三段直接省略了主角说服乘客的过程，在乘客接受条件的
+基础上展开了一段关于生之美好的独白。三段结构上的变化使电影的节奏灵动而不散乱，均衡而不单调。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292617024/" title="shot0009 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6220/6292617024_68163aeb3b.jpg" width="500" height="286" alt="shot0009" /></a>
+
+</p>
+<p>本片的主角与其说是选择死亡，不如说是选择不去选择。是故他虽被第三名乘客燃起了生的渴望，却依然没有勇气去真正做出选择。
+既要逃避自主的抉择又害怕上苍的决定，是其悲哀之处。
+
+</p>
+<p>片尾一段片场记录镜头告诉我们电影不过是虚幻的声光，不能解决问题也不能阐明真理，主角之所以没有结局是因为一个虚构人物的生死本就
+无足轻重，血肉之躯的观者倒是该对生死多一些思考。
+
+</p>
+]]></description><link>http://undefined/taste-of-cherry</link><guid isPermaLink="true">http://undefined/taste-of-cherry</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Mon, 01 Aug 2011 02:26:00 GMT</pubDate></item><item><title><![CDATA[<a href="./chakra-linux">Chakra-Linux</a>]]></title><description><![CDATA[<h1>Chakra Linux 安装配置笔记</h1>
+<h2>安装</h2>
+<p>Chakra 的Live cd 做的很不错。与实际安装速度上差距不大，在n卡机器上运行顺利，特效正常开启。
+Tribe不比Anaconda在差，安装结束后提示安装常用bundle很贴心，
+此外自动识别windows启动项也省去了我手动配置的工夫。整个过程不能再顺利了。
+
+</p>
+<h2>输入法</h2>
+<p>输入法用fcitx4,源里有scim，无ibus。firefox bundle中fcitx输入不能。据fcitx开发者@csslayer 说是
+bundle自用的gtk与系统的im-xim.so不兼容。不得已编译了(也是@csslayer负责的）
+firefox-kde-opensuse，编了两个小时，粉碎了我用Gentoo的一切幻想。
+同是bundle gimp中fcitx表现良好。
+
+</p>
+<h2>字体</h2>
+<p>源里有文泉驿微米黑，作为系统字体中英文均胜任，不赘言。
+
+</p>
+<h2>活动/Activity</h2>
+<p>我觉得这个功能的心理意义大于实际意义，与虚拟桌面的区别无非就是切换不那么直观了，
+但客观上的确起到了集中注意力的作用，等kde4.7发布实现活动与程序的绑定
+后倒能算一个killer feature（其实我现在开机设置自动恢复上次会话，效果也差不多吧）。
+
+</p>
+<h2>GTK 程序</h2>
+<p>装了好几个bundle，真正在用的只有gimp，播放器用qmmp代替了以前用的audacious，
+ape+cue无压力。从ccr 里装了一个kmldonkey,还没用过，争取替代amule。
+
+</p>
+<h2>感觉</h2>
+<p>Chakra的kde调教的很细致，主题kneda很好不说，plasmoid种类较 <strong>Fedora</strong> 丰富，
+显示天气的那个plasmoid 也不用我每次连wifi后都手动刷新了。
+appset-qt很弱，但日常都用pacman,所以没什么关系。
+总而言之，在我用过的发行版（Ubuntu,Fedora,Puppy,Chakra)中Chakra是我目前为止感觉最舒心的一个，
+加之其采用滚动升级，我已有了长期坚守的打算。 
+
+
+
+</p>
+]]></description><link>http://undefined/chakra-linux</link><guid isPermaLink="true">http://undefined/chakra-linux</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Tue, 19 Jul 2011 04:09:37 GMT</pubDate></item><item><title><![CDATA[<a href="./symbiopsychotaxiplasma">symbiopsychotaxiplasma</a>]]></title><description><![CDATA[<p>Symbiopsychotaxiplasm，中译《共生心理分类学》，是William Greaves于1968年执导的一部纪录片，
+使用多台摄影机同时拍摄，构成了戏中戏中戏的效果。
+
+</p>
+<p>本片最精彩的部分莫过于摄制组对导演私下发难的段落。在传统时空中，摄制组员的讨论与“电影”的拍摄以至于与“电影”的内容属于三个截然分开的层次，
+但借助于胶片载体，三层时空通过交错的剪辑获得了平等性。而这种有违常识的体验挑战了观者对真实与虚幻的认识。在一段组员的谈话中，一位组员即提出：
+若他们的讨论被剪入成片，观众何以判断这段影像是记录还是表演，何以知道这是摄制组对导演的反叛还是导演的妙手安排?这一关于真与伪的命题，无疑是影片引人入胜的核心。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6292616582/" title="shot0007 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6221/6292616582_dae58a12e6.jpg" width="500" height="366" alt="shot0007" /></a>
+
+</p>
+<p>本片采用了大量的爵士乐配乐，灵动的节奏与自由的影像风格相得益彰，结尾的一个爆音，则是点出了电影的物质属性，与 <em>Man Bite Dog</em> 结尾胶片转完有异曲同工之妙
+
+</p>
+]]></description><link>http://undefined/symbiopsychotaxiplasma</link><guid isPermaLink="true">http://undefined/symbiopsychotaxiplasma</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Mon, 18 Jul 2011 03:40:39 GMT</pubDate></item></channel></rss>
