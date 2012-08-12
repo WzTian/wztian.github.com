@@ -8,7 +8,6 @@
     <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
     <link rel="stylesheet" href="/css/application.css" type="text/css" media="all">
     <link rel="stylesheet" href="/css/blacksmith.css" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,100,900,700,400italic,300italic,900italic,700italic,100italic|Merriweather:400,300' rel='stylesheet' type='text/css'>
 
   </head>
   <body>
@@ -20,21 +19,17 @@
       <div id="page">
 
         <div id="sidebar">
+          <nav id="sidebar-node" class="breadcrumbs">
+            <a href="" class="breadcrumb"></a>
+          </nav>
           <div id="sidebar-node">
             <h2>Table of Contents</h2>
             <nav id="toc"></nav>
           </div>
         </div>
         <div id="article">
-          <div class="metadata">
-            <nav class="breadcrumbs">
-              <a href="" class="breadcrumb">asd</a>
-            </nav>
-          </div>
-          <h1>Index of <span class="pwd">some directory</span></h1>
-          <table class="ls">
-            <tr><td>/foo/bar/baz</td></tr>
-          </table>
+          <h1>Error <span class="status">404</span>: <span class="message">Page Not Found</span></h1>
+          <h3>Try exploring one of the links to the left!<h3>
         </div>
         <script type="text/javascript" src="/js/jquery.js"></script>
       </div>

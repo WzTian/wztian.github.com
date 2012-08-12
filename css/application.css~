@@ -14,7 +14,7 @@
 
 body {
   background: url(../../images/theme/noise.png) repeat left top;
-  font: normal 14px helvetica, Arial,"lucida grande", verdana, sans-serif;
+  font: normal 12px "Lato","lucida grande", verdana, sans-serif;
 }
 
 input,
