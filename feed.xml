@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>http://github.com/dylan/node-rss</link><generator>NodeJS RSS Module</generator><lastBuildDate>Mon, 13 Aug 2012 01:38:52 GMT</lastBuildDate><atom:link href="/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[<a href="./blogging-with-blacksmith">Blogging with Blacksmith</a>]]></title><description><![CDATA[<p>主力编辑器换成emacs之后，再用vimwiki写博客就觉得十分残念，所以博客就这么长草了，
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Untitled RSS Feed]]></title><description><![CDATA[Untitled RSS Feed]]></description><link>http://github.com/dylan/node-rss</link><generator>NodeJS RSS Module</generator><lastBuildDate>Mon, 13 Aug 2012 04:00:24 GMT</lastBuildDate><atom:link href="/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[<a href="./blogging-with-blacksmith">Blogging with Blacksmith</a>]]></title><description><![CDATA[<p>主力编辑器换成emacs之后，再用vimwiki写博客就觉得十分残念，所以博客就这么长草了，
 <del>才不是人家懒呢！</del> 之前看到octopress十分流行，也想过试一试，但是由于
 其依赖的ruby版本旧于arch自带，我又懒得折腾rvm什么的，就无限期的放了下来。
 
@@ -65,7 +65,43 @@
 这个包，安装之后生成的二进制文件名是nc.openbsd,因此要修改 <code>~<span class="regexp">/.vim/slime</span><span class="regexp">/contrib/swank</span>-<span class="identifier">mit</span>-<span class="identifier">scheme</span>.<span class="identifier">scm</span></code>
 的116行为 <code>(<span class="identifier">cmd</span> (<span class="identifier"><span class="keymethods">format</span></span> <span class="comment">#f "exec nc.openbsd -v -q 0 -l ~a 2&gt;&amp;1" port))</span></code>
 </p>
-]]></description><link>http://undefined/arch-netcat-slimv-mit-scheme</link><guid isPermaLink="true">http://undefined/arch-netcat-slimv-mit-scheme</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Tue, 20 Dec 2011 04:22:26 GMT</pubDate></item><item><title><![CDATA[<a href="./no-title">No-Title</a>]]></title><description><![CDATA[<h1>电影还可以这样拍</h1>
+]]></description><link>http://undefined/arch-netcat-slimv-mit-scheme</link><guid isPermaLink="true">http://undefined/arch-netcat-slimv-mit-scheme</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Tue, 20 Dec 2011 04:22:26 GMT</pubDate></item><item><title><![CDATA[<a href="./vim-shell">Vim-Shell</a>]]></title><description><![CDATA[<h1>在vim里整合shell的小结</h1>
+<p>vim的开发者Bram Moolenaar明确的表示了不会在主线的vim里
+整合shell，但这并不妨碍有志者进行拓展。
+
+</p>
+<h2>python的!VimSh</h2>
+<p><a href="http://www.vim.org/scripts/script.php?script_id=165">http://www.vim.org/scripts/script.php?script_id=165</a>
+
+</p>
+<p>这个是我最先找到的，bash的确跑起来了，但prompt样式怪异，
+<code>ls</code>之后目录显示也有问题，应该是色彩设置上不支持，用了一会
+还有各种各样的问题，基本没有什么可用性。
+
+</p>
+<h2>ConqueTerm</h2>
+<p>这个是Linux Toy上介绍的，今天试用了一会儿，觉得非常好用，反应速度也还好，
+中文，色彩，一切正常。
+<code>~./.vimrc</code>里加了一句：<code><span class="identifier"><span class="keymethods">map</span></span> &amp;<span class="identifier">lt</span>;<span class="identifier">leader</span>&gt;<span class="identifier">sh</span> <span class="symbol">:<span class="identifier">ConqueTerm</span></span> <span class="identifier">bash</span>&amp;<span class="identifier">lt</span>;<span class="identifier">cr</span>&gt;</code>
+
+</p>
+<p><a href="http://www.vim.org/scripts/script.php?script_id=2771">http://www.vim.org/scripts/script.php?script_id=2771</a>
+
+</p>
+<h2>Screen Shell</h2>
+<p>这个是之前一直用的，倒也蛮好，就是screen里面似乎不支持256色，molokai配色
+没有了，于是果断抛弃。
+
+</p>
+<p><a href="http://www.vim.org/scripts/script.php?script_id=2711">http://www.vim.org/scripts/script.php?script_id=2711</a>
+
+</p>
+<p>其实<code>Ctrl-z</code>再<code>fg</code>也是不错的方式，但输入命令时看不了代码。
+<code>:! some-command</code> 只是一次性的，略有不足。
+
+
+</p>
+]]></description><link>http://undefined/vim-shell</link><guid isPermaLink="true">http://undefined/vim-shell</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sun, 27 Nov 2011 03:23:49 GMT</pubDate></item><item><title><![CDATA[<a href="./no-title">No-Title</a>]]></title><description><![CDATA[<h1>电影还可以这样拍</h1>
 <p>有一个不知真假的小段子，说是加西亚 马尔克斯读了变形记的第一句：
 “格里格早上起来，变成了一只甲虫。”，立即拍桌大叫：“XX，
 小说还可以这么写！”然后，就写出了百年孤独……
@@ -113,7 +149,62 @@
 觉得被浪费掉了五分钟美丽人生，我这里先行致歉。
 
 </p>
-]]></description><link>http://undefined/no-title</link><guid isPermaLink="true">http://undefined/no-title</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sat, 26 Nov 2011 03:52:46 GMT</pubDate></item><item><title><![CDATA[<a href="./monty-hall-problem">Monty-Hall-Problem</a>]]></title><description><![CDATA[<h1>三门问题</h1>
+]]></description><link>http://undefined/no-title</link><guid isPermaLink="true">http://undefined/no-title</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sat, 26 Nov 2011 03:52:46 GMT</pubDate></item><item><title><![CDATA[<a href="./zsh">Zsh</a>]]></title><description><![CDATA[<h2>zsh太棒了啊</h2>
+<p>如题。之前在论坛上看到一人发表用zsh后的感言，真是涕泪俱下，仿佛被bash压迫了三百年
+终于翻身了。今天用了Linuxtoy.org上Kardinal的<code>.zshrc</code>，居然也有类似的感觉。
+
+</p>
+<p>好在哪里呢？
+
+</p>
+<p>首先当然是漂亮了。如图：
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6345879098/" title="2011-11-14-150338_1024x600_scrot by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6215/6345879098_b9a267bd15_z.jpg" width="640" height="375" alt="2011-11-14-150338_1024x600_scrot" /></a>
+
+</p>
+<p>bash 的PS1，在怎么美化也没见过这种效果啊……
+
+</p>
+<p>当然更重要的是贴心，我输入<code>cmo</code>，自动补全出了这么多选择（还有<code>chmod</code>，这个好像和<code>setopt CORRECT</code>无关的），
+用tab键或者方向键导航。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6345879130/" title="2011-11-14-150423_1024x600_scrot by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6237/6345879130_3f77a96dcd_z.jpg" width="640" height="375" alt="2011-11-14-150423_1024x600_scrot" /></a>
+
+</p>
+<p>关于自动改错(<code>setopt CORRECT</code>)，上一张图：
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6345151303/" title="2011-11-14-151241_1024x600_scrot by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6019/6345151303_89c6a9f1eb_z.jpg" width="640" height="375" alt="2011-11-14-151241_1024x600_scrot" /></a>
+
+</p>
+<p>n=no y=yes a=abort e=edit
+
+</p>
+<p>还有路径别名，我把这个博客html源文件地址文件夹设别名为<code>WWW</code>，每次只需输入<code>cd ~WWW</code>就能从
+任意当前路径进入该目录，比bash里先切到<code>~</code>，再<code>cd wz</code>再tab要方便多了。
+
+</p>
+<p>这个shell自带的补全功能也很强大，可以抛弃原来bash_completion那个东西了，直接的一个好处就是
+shell启动变快了（肉眼能感觉到的快！）。
+
+</p>
+<p>一些找到的相关链接：
+
+</p>
+<p><a href="http://www.ibm.com/developerworks/cn/linux/shell/z/">http://www.ibm.com/developerworks/cn/linux/shell/z/</a>
+<a href="http://www.ibm.com/developerworks/cn/aix/library/au-satzsh.html">http://www.ibm.com/developerworks/cn/aix/library/au-satzsh.html</a>
+<a href="http://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/">http://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/</a>
+当然还有官网：
+<a href="http://www.zsh.org/">http://www.zsh.org/</a>
+
+</p>
+<hr />
+<p>UPDATE:第二篇哲学论文拿了A，可以安心复习数学了。
+
+</p>
+]]></description><link>http://undefined/zsh</link><guid isPermaLink="true">http://undefined/zsh</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Mon, 14 Nov 2011 03:26:32 GMT</pubDate></item><item><title><![CDATA[<a href="./monty-hall-problem">Monty-Hall-Problem</a>]]></title><description><![CDATA[<h1>三门问题</h1>
 <p>Monty Hall 问题，是从美国的一个game show "Let's Make a Deal"里的游戏环节产生的。主持人Monty Hall
 给出三扇门，两扇后面啥也没有，但另一扇后面放的是游戏大奖。被蒙在鼓里的参赛选手要在三扇
 中选择一扇，选完了之后，Monty Hall先生把剩下两扇门中没有奖品的一扇（如果两扇都没有，就任选一扇）打开，
@@ -270,7 +361,120 @@ Melville在这点上做的好过我之前看过的任一部战争片的导演。
 
 
 </p>
-]]></description><link>http://undefined/rosetta</link><guid isPermaLink="true">http://undefined/rosetta</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Wed, 24 Aug 2011 03:42:51 GMT</pubDate></item><item><title><![CDATA[<a href="./qmmp-cpu-cue-encoding">qmmp-cpu-cue-encoding</a>]]></title><description><![CDATA[<h1>qmmp cpu 占用与.cue 转码</h1>
+]]></description><link>http://undefined/rosetta</link><guid isPermaLink="true">http://undefined/rosetta</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Wed, 24 Aug 2011 03:42:51 GMT</pubDate></item><item><title><![CDATA[<a href="./berkeley-four-days">Berkeley-Four-Days</a>]]></title><description><![CDATA[<h1>伯克利四天记</h1>
+<h2>住</h2>
+<p>从foothill的summer housing 搬到了正式的 Unit1 freeborn hall。帮我们搬行李的志愿者既当司机又做脚夫，好不辛苦。在foothill等车的时候遇到了
+一个友好的美国学长Tim，本科物理，现在读核物理的phd。帮我们开车的志愿者和他相熟，说福岛事故后，就是他的小组负责监控berkeley的放射物质含量。
+我们楼层的管理员 Navneet 是一个很友善的学姐，我打字的这会正在开一个birthday party。
+
+</p>
+<p>开始放图：
+
+</p>
+<p><img src="../images/IMG005.jpg" alt="" />
+<img src="../images/IMG006.jpg" alt="" />
+
+</p>
+<p>有趣的摇摇椅
+
+</p>
+<p><img src="../images/IMG007.jpg" alt="" />
+<img src="../images/IMG008.jpg" alt="" />
+
+</p>
+<p>看窗外
+
+</p>
+<p><img src="../images/IMG009.jpg" alt="" />
+<img src="../images/IMG010.jpg" alt="" />
+
+</p>
+<p>宿舍
+
+</p>
+<p><img src="../images/IMG011.jpg" alt="" />
+
+</p>
+<p>熊在伯克利无处不在
+
+</p>
+<h2>吃</h2>
+<p>前几天在subway解决了好多顿，今天发现了Asian Ghetto，中午吃了生平第一个falafel，晚上吃了生平第一个taco，味道
+真的很不错。价格也公道。Unit1 较之偏远的foothill，在就餐上真是方便多了。（之前也吃过一些素鸡，素肉等等，还是falafel的仿肉效果最逼真！）
+
+</p>
+<p>我这几天都是就着水龙头喝水，也没像部分同志那样起肠胃反应，看似我还是满强壮的？
+
+</p>
+<h2>杂项</h2>
+<p>这几天一个主要的感觉就是美国人很友好。大部分店员都会跟客户很真诚地问好。我在那家falafel店无比迷茫的时候，哪位女店员很热心的向我做了介绍，
+我说我从没吃过falafel，她还给了我一个样品品尝。我走了，她还很仔细的问我吃的如何，习不习惯。
+
+</p>
+<p>我去chase开户，遇见的是一个叫 Ben 的 banker，他在进chase之前在广西南宁教过英语，人也是很好。一个学生账户就有一个personal banker，这在国内是
+不可想象的。
+
+</p>
+<p>时间也晚了，暂且就写到这里。
+
+</p>
+]]></description><link>http://undefined/berkeley-four-days</link><guid isPermaLink="true">http://undefined/berkeley-four-days</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Thu, 18 Aug 2011 03:49:09 GMT</pubDate></item><item><title><![CDATA[<a href="./berkeley-day-one">Berkeley-Day-One</a>]]></title><description><![CDATA[<h1>初到伯克利</h1>
+<p>13个小时的飞行还是比较疲惫的，经济舱本来就没多少空间，一边坐着一个人高马大的老先生，脚下放着一个巨大的背包，腾挪之间不由得捉襟见肘，睡也睡不踏实
+。想看书，两侧熟睡的两位未免让我开灯时心里不安。
+
+</p>
+<p>入关排队颇有罗湖口岸的风采，只是比之后者中香港居民的潇洒自如，此处的美国公民们的排队之苦，与我们并无二致。
+
+</p>
+<p>Bayporter 不是机场官方的服务，找起来不是太直观。不过好在一下到停车场就有一辆雄壮威武，名为七人面的，实似悍马路虎的大家伙恰好赶到，
+免了我再去彷徨等待。
+
+</p>
+<p>旧金山的路坡度较大，且道路前行的切向、法向都有倾角，不习惯的话会略感惊悚。
+
+</p>
+<p>到了 Stern Hall，遇见一群中国学生在 check in，感觉有些怪异。
+
+</p>
+<p>搭好窝后，在外面转了一圈，找了找 I House 和以后上课的地方，时间关系，没找全，明天继续。
+
+</p>
+]]></description><link>http://undefined/berkeley-day-one</link><guid isPermaLink="true">http://undefined/berkeley-day-one</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sun, 14 Aug 2011 03:47:55 GMT</pubDate></item><item><title><![CDATA[<a href="./leaving">Leaving</a>]]></title><description><![CDATA[<h1>要出发了</h1>
+<p>后天一大早就要走了，赶早班机到深圳马不停蹄过关到国际机场，2点半的飞机到旧金山，然后坐bayporter的车到 Stern Hall。
+
+</p>
+<p>有人请客送行，在没有取得任何成绩的情况下被庆祝真是很尴尬。
+
+</p>
+<p>kde 内置的weather plamoid 数据源很弱，Berkeley 天气只能搜到一个德国网站，与weather.com的数据相差+5℃.。<code>pacman -Ss weather</code> 发现了yawp这个
+好东西，支持多城市，可搜多个数据源，配置项丰富，功能强大全面，谁用谁知道……就是图标卡通了一点，有功夫hack一下。
+
+</p>
+<p>各个行李箱都装的差不多了，重量还不到，明天最终定容过秤封箱。
+
+</p>
+<p>新室友一个越南人，一个印度人，当然也可能是多代移民。
+
+</p>
+<p>两门课的书还没出来，纠结，我还想到那之后直接amazon一网打尽呢。
+
+</p>
+<p>手机考虑 virgin mobile 的 beyond talk plan。只是门面店好像都蛮远的（拿几百刀到711店买手机怎么感觉很奇怪呢）。
+
+</p>
+<p>这两天opera基本转正了，在其流畅的操作之下火狐更显得卡、卡、卡……
+
+</p>
+]]></description><link>http://undefined/leaving</link><guid isPermaLink="true">http://undefined/leaving</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Fri, 12 Aug 2011 03:46:26 GMT</pubDate></item><item><title><![CDATA[<a href="./try-out-opera">Try-out-Opera</a>]]></title><description><![CDATA[<h1>Opera 试用</h1>
+<p>opera next在linux下启动速度完胜火狐，ui与kde整合度也有所提高。亮点在于各种流畅的动画效果与高速的页面载入。细节设计也很用心，opera的about:config 界面在一众浏览器中绝对是独树一帜的。遗憾lastpass安装不成。不然完全有转正可能。
+
+</p>
+<hr />
+<p>virgin mobile 又出了一款新机子，多了一个选择。
+
+
+</p>
+]]></description><link>http://undefined/try-out-opera</link><guid isPermaLink="true">http://undefined/try-out-opera</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Wed, 10 Aug 2011 03:45:29 GMT</pubDate></item><item><title><![CDATA[<a href="./qmmp-cpu-cue-encoding">qmmp-cpu-cue-encoding</a>]]></title><description><![CDATA[<h1>qmmp cpu 占用与.cue 转码</h1>
 <h2>qmmp cpu</h2>
 <p>调教前，播放时 cpu 占用60%~80%,暂停时在10%上下。
 
@@ -308,7 +512,26 @@ for root, dirs, files in os.walk(cuepath):
                 print 'Oops, Permission denied for %s' % file
             else :
                 print 'Something went wrong and I have no idea why'</code></pre>
-]]></description><link>http://undefined/qmmp-cpu-cue-encoding</link><guid isPermaLink="true">http://undefined/qmmp-cpu-cue-encoding</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Thu, 04 Aug 2011 04:14:39 GMT</pubDate></item><item><title><![CDATA[<a href="./taste-of-cherry">taste-of-cherry</a>]]></title><description><![CDATA[<p><em>The Taste of Cherry</em> 是我看的第一部阿巴斯 基亚罗斯塔米的作品，虽然被一小段错误的剧透所误导，整个观影过程还是很美妙的。
+]]></description><link>http://undefined/qmmp-cpu-cue-encoding</link><guid isPermaLink="true">http://undefined/qmmp-cpu-cue-encoding</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Thu, 04 Aug 2011 04:14:39 GMT</pubDate></item><item><title><![CDATA[<a href="./my-profile">My-Profile</a>]]></title><description><![CDATA[<h1>档案</h1>
+<p>今天去学校把我的档案补齐了，顺便拿了毕业证。档案袋没有密封老师居然也说没有关系，大概也是考虑我基本用不上它，毕竟我回国加
+入事业单位、机关的可能性还是比较小的。
+
+</p>
+<p>在分拣档案的是二班一个原来奥数班里的同学，要去武大。若是他那次和我们同去了华中师大的数学夏令营，不知还
+会不会有勇气投身火炉呢？
+
+</p>
+<p>买好了登机箱，这两天交学费，分拣行李。
+
+</p>
+<hr />
+<p>kde4.7 外观上没什么大区别，细节上更舒服了一点，如拖放激活最大化时的效果。
+
+</p>
+<p>终端字体换成了 Monaco，感觉很欢快。
+
+</p>
+]]></description><link>http://undefined/my-profile</link><guid isPermaLink="true">http://undefined/my-profile</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Thu, 04 Aug 2011 03:43:53 GMT</pubDate></item><item><title><![CDATA[<a href="./taste-of-cherry">taste-of-cherry</a>]]></title><description><![CDATA[<p><em>The Taste of Cherry</em> 是我看的第一部阿巴斯 基亚罗斯塔米的作品，虽然被一小段错误的剧透所误导，整个观影过程还是很美妙的。
 
 </p>
 <p><a href="http://www.flickr.com/photos/twzh_ly01/6292097047/" title="shot0008 by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6214/6292097047_80ec3d32ce.jpg" width="500" height="286" alt="shot0008" /></a>
@@ -330,7 +553,88 @@ for root, dirs, files in os.walk(cuepath):
 无足轻重，血肉之躯的观者倒是该对生死多一些思考。
 
 </p>
-]]></description><link>http://undefined/taste-of-cherry</link><guid isPermaLink="true">http://undefined/taste-of-cherry</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Mon, 01 Aug 2011 02:26:00 GMT</pubDate></item><item><title><![CDATA[<a href="./chakra-linux">Chakra-Linux</a>]]></title><description><![CDATA[<h1>Chakra Linux 安装配置笔记</h1>
+]]></description><link>http://undefined/taste-of-cherry</link><guid isPermaLink="true">http://undefined/taste-of-cherry</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Mon, 01 Aug 2011 02:26:00 GMT</pubDate></item><item><title><![CDATA[<a href="./more-gibberish">more-gibberish</a>]]></title><description><![CDATA[<p>读毕《白夜》，接着读《蒙田随笔》。
+
+</p>
+<p>柯南博格的影片看得神清气爽，伯格曼的《呼喊和细语》却让我深受创伤。好导演拍出的人物有血有肉，伯格曼的人物有灵魂。
+
+</p>
+<p>一点一点的推广raster后端。试着用opengl打开dolphin，缩放时不甚流畅。等4.7。
+
+</p>
+<p>妈妈把我的信用卡的初始密码丢掉了……下午到银行。
+
+</p>
+]]></description><link>http://undefined/more-gibberish</link><guid isPermaLink="true">http://undefined/more-gibberish</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sat, 30 Jul 2011 03:42:47 GMT</pubDate></item><item><title><![CDATA[<a href="./raster">raster</a>]]></title><description><![CDATA[<p>先是把全局的 graphics system 换成了 raster，结果是灾难性的，log in 后只能打开dolphin 和 yakuake。 手动把 <code>~<span class="regexp">/.kde4/</span>env</code> 里的 <code>qt-graphicssystem.sh</code> 删了，重启，才恢复正常。
+
+</p>
+<p>后来改 <code>/usr/share/autostart</code> 里的plasma-desktop.desktop, 和 <code>/usr/share/application</code> 里的 yakuake.desktop 加上<code>--graphicssystem raster</code> 的启动选项，目前感受上的确更流畅了，cpu 占用率也有显著降低。
+
+</p>
+<p>ps.说到cpu，flashplayer11还真的是改善蛮大的。
+
+</p>
+]]></description><link>http://undefined/raster</link><guid isPermaLink="true">http://undefined/raster</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Wed, 27 Jul 2011 03:41:09 GMT</pubDate></item><item><title><![CDATA[<a href="./white-nights-insomnia">White-Nights-Insomnia</a>]]></title><description><![CDATA[<h1>白夜，失眠症</h1>
+<p>在读陀斯妥耶夫斯基的《白夜》，又看了挪威版的 <em>Insomnia</em> 。
+
+</p>
+<p>在读《白夜》之前先看了维斯康蒂改编的同名电影。除了跳舞那一场，全片几乎没有什么技法上的特别之处，却
+有一种精致而脆弱的美感。 
+
+</p>
+<p>Dreamer 作为一种存在的状态，或许其实是很不错的，毕竟要做梦，先要有清醒看到现实的那份幸运。
+
+</p>
+<p><em>Insomnia</em> 贯穿全片的是那片无孔不入的阳光，令人窒息。无配乐造成的精神疲劳与高亮度造成的视觉疲劳将观者成功代入失眠
+者虚实难分的心理幻境。
+
+</p>
+<p>今天大采购，箱子买了，外套下了订单。学费账单也到了，一切按部就班的走。
+
+</p>
+]]></description><link>http://undefined/white-nights-insomnia</link><guid isPermaLink="true">http://undefined/white-nights-insomnia</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Tue, 26 Jul 2011 03:39:57 GMT</pubDate></item><item><title><![CDATA[<a href="./choosing-class-f-2011">choosing-class-f-2011</a>]]></title><description><![CDATA[<h1>选课</h1>
+<p>选了十七个学分的课，如下：
+- Math 55 discrete math
+- Math 1a calculus
+- Philos 25a ancient philosophy
+- Eps c082 introduction to ocean
+- Amerstd 27ac lives of struggle: minorities in a majority culture
+
+
+</p>
+<p>还是比较满意的，如果telebears昨晚没503的话，说不定我会选 philos 3，而错过我可能更有兴趣的25a。
+
+</p>
+]]></description><link>http://undefined/choosing-class-f-2011</link><guid isPermaLink="true">http://undefined/choosing-class-f-2011</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sat, 23 Jul 2011 03:38:40 GMT</pubDate></item><item><title><![CDATA[<a href="./gibberish">Gibberish</a>]]></title><description><![CDATA[<p>调整了一下博客的css，配色稍微协调了一点。
+
+</p>
+<p>关掉配音，放起Keith Jarret's Koln Concert看了半场八几年的篮球赛，某些段落
+音乐和画面配合的相当magical。
+
+</p>
+<p>读完了卡夫卡的 <em>Trial</em> 情绪继续低落。
+</p>
+]]></description><link>http://undefined/gibberish</link><guid isPermaLink="true">http://undefined/gibberish</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Fri, 22 Jul 2011 03:37:25 GMT</pubDate></item><item><title><![CDATA[<a href="./tired-and-anxious">Tired-and-Anxious</a>]]></title><description><![CDATA[<h1>Tired and anxious</h1>
+<p>这几天时间利用率比较低。书看的也少了。
+
+</p>
+<p>第二轮选课要开始了，之后还有各种杂七杂八的事情，只能硬着头皮一件一件做。
+
+</p>
+<p>Math55的课本到了，厚得很，前面还没有什么难的东西。
+
+</p>
+<p>前天打了乙肝疫苗，左臂一直有点僵硬，不知道是否为心理作用。
+
+</p>
+<p>blog 基本成型了，美化以后再说，不想在这上面花太多心思。
+
+</p>
+<p>ps.给标题加了阴影效果，ie 看不到的了：）
+ps.ps. rekonq里不支持text-shadow的fuzzy效果，搞得我调試时困惑了一下。
+
+</p>
+]]></description><link>http://undefined/tired-and-anxious</link><guid isPermaLink="true">http://undefined/tired-and-anxious</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Wed, 20 Jul 2011 03:36:01 GMT</pubDate></item><item><title><![CDATA[<a href="./chakra-linux">Chakra-Linux</a>]]></title><description><![CDATA[<h1>Chakra Linux 安装配置笔记</h1>
 <h2>安装</h2>
 <p>Chakra 的Live cd 做的很不错。与实际安装速度上差距不大，在n卡机器上运行顺利，特效正常开启。
 Tribe不比Anaconda在差，安装结束后提示安装常用bundle很贴心，
@@ -369,7 +673,21 @@ appset-qt很弱，但日常都用pacman,所以没什么关系。
 
 
 </p>
-]]></description><link>http://undefined/chakra-linux</link><guid isPermaLink="true">http://undefined/chakra-linux</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Tue, 19 Jul 2011 04:09:37 GMT</pubDate></item><item><title><![CDATA[<a href="./symbiopsychotaxiplasma">symbiopsychotaxiplasma</a>]]></title><description><![CDATA[<p>Symbiopsychotaxiplasm，中译《共生心理分类学》，是William Greaves于1968年执导的一部纪录片，
+]]></description><link>http://undefined/chakra-linux</link><guid isPermaLink="true">http://undefined/chakra-linux</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Tue, 19 Jul 2011 04:09:37 GMT</pubDate></item><item><title><![CDATA[<a href="./wingdns">WingDNS</a>]]></title><description><![CDATA[<h2>使用wingdns</h2>
+<p>dot.tk提供的dns服务不太靠谱，设置项过于简单以至于令人困惑，于是暂时先用了它的域名转向。
+
+</p>
+<p>这样做的不足在于，无论访问那个页面，地址栏永远显示根域名，刷新一下就回主页了。于是我就开始寻找第三方的免费DNS服务。
+
+</p>
+<p>本想选择国外的，但找到的几个免费服务均有限时。dnspod 我以前听说过，但注册时需提供姓名和电话，我不放心。wingdns是google
+搜到的，稳定性等都很难说，但既然works，就先用着，毕竟我目前还没有在这个站点上投入金钱的打算，一切要求还是降到最低为好。
+
+</p>
+<p><strong>UPDATE</strong>: 已转用freedns.afraid.org.
+
+</p>
+]]></description><link>http://undefined/wingdns</link><guid isPermaLink="true">http://undefined/wingdns</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Tue, 19 Jul 2011 03:34:10 GMT</pubDate></item><item><title><![CDATA[<a href="./symbiopsychotaxiplasma">symbiopsychotaxiplasma</a>]]></title><description><![CDATA[<p>Symbiopsychotaxiplasm，中译《共生心理分类学》，是William Greaves于1968年执导的一部纪录片，
 使用多台摄影机同时拍摄，构成了戏中戏中戏的效果。
 
 </p>
@@ -384,4 +702,16 @@ appset-qt很弱，但日常都用pacman,所以没什么关系。
 <p>本片采用了大量的爵士乐配乐，灵动的节奏与自由的影像风格相得益彰，结尾的一个爆音，则是点出了电影的物质属性，与 <em>Man Bite Dog</em> 结尾胶片转完有异曲同工之妙
 
 </p>
-]]></description><link>http://undefined/symbiopsychotaxiplasma</link><guid isPermaLink="true">http://undefined/symbiopsychotaxiplasma</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Mon, 18 Jul 2011 03:40:39 GMT</pubDate></item></channel></rss>
+]]></description><link>http://undefined/symbiopsychotaxiplasma</link><guid isPermaLink="true">http://undefined/symbiopsychotaxiplasma</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Mon, 18 Jul 2011 03:40:39 GMT</pubDate></item><item><title><![CDATA[<a href="./first-day-of-vimwiki">First-Day-Of-Vimwiki</a>]]></title><description><![CDATA[<h1>First day of Vimwiki</h1>
+<p>放假后有了闲工夫就开始折腾了，先是抛弃了 Fedora 投奔了 Chakra Linux , 后来是捡起了Python编程的学习，顺便还读了一下 GNU 的 <em>Introduction to linux</em> 扫了扫盲。在折腾的过程中还是有一些收获，不整理起来未免可惜。在了解了一些个人wiki软件后，觉得 VimWiki 最能满足我的需求。理由很简单：
+- 我用vim
+- 我在一个纯KDE发行版中，zimwiki等依赖gtk
+- 我对wiki的功能目前只有就基本的要求，VimWiki 足够简单。
+
+</p>
+<p>接下来的几天中，我计划：
+- 掌握 VimWiki 主要功能，快捷键。
+- 注册一个.tk域名，时机成熟时把这个个人wiki部署到网上。
+
+</p>
+]]></description><link>http://undefined/first-day-of-vimwiki</link><guid isPermaLink="true">http://undefined/first-day-of-vimwiki</guid><dc:creator><![CDATA[Weizhi Tian]]></dc:creator><pubDate>Sun, 17 Jul 2011 03:30:20 GMT</pubDate></item></channel></rss>

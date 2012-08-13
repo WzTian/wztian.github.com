@@ -1,0 +1,134 @@
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Blacksmith is a static site generator." />
+    <meta name="keywords" content="zsh,linux" />
+    <title>ZshWzTian's Nest</title>
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <link rel="stylesheet" href="/css/application.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/blacksmith.css" type="text/css" />
+    <link rel="stylesheet" href="/css/highlight/solarized_dark.min.css" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,300,100,900,700,400italic,300italic,900italic,700italic,100italic|Merriweather:400,300" rel="stylesheet" type="text/css" />
+    <script src="/js/highlight.pack.js"></script>
+    <script>
+        hljs.tabReplace = '    ';
+        hljs.initHighlightingOnLoad();
+    </script>
+
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <h1 class="blog_title"><a href="/">WzTian's Nest</a></h1>
+      </header>
+      <div class="metadata">
+        <div id="sidebar" style="margin-bottom: 32px;">
+          <div class="sidebar-node author">
+            <h2>About This Author:</h2>
+            <ul>
+              <li><strong>Name: </strong><span class="name">Weizhi Tian</span></li>
+              <li class="if-github"><strong>Github: </strong><span class="github"><a href="https://github.com/WzTian">WzTian</a></span></li>
+              <li class="if-twitter"><strong>Twitter: </strong><span class="twitter"><a href="https://twitter.com/WzTian">WzTian</a></span></li>
+            </ul>
+          </div>
+          <div class="sidebar-node if-date">
+            <h2>Article Publish Date:</h2>
+            <strong class="date">Sunday, Nov 13 2011</strong>
+          </div>
+          <div class="sidebar-node if-byThisAuthor">
+            <h2>More Articles By This Author</h2>
+            <nav class="byThisAuthor"><ul><li><a href="/blogging-with-blacksmith">blogging with blacksmith</a></li><li><a href="/halting-problem">halting problem</a></li><li><a href="/arch-netcat-slimv-mit-scheme">arch netcat slimv mit scheme</a></li><li><a href="/vim-shell">vim shell</a></li><li><a href="/monty-hall-problem">monty hall problem</a></li><li><a href="/army-of-shadows">army of shadows</a></li><li><a href="/new-look-for-blog">new look for blog</a></li><li><a href="/tree-of-life">tree of life</a></li><li><a href="/rosetta">rosetta</a></li><li><a href="/berkeley-day-one">berkeley day one</a></li><li><a href="/leaving">leaving</a></li><li><a href="/try-out-opera">try out opera</a></li><li><a href="/qmmp-cpu-cue-encoding">qmmp cpu cue encoding</a></li><li><a href="/my-profile">my profile</a></li><li><a href="/taste-of-cherry">taste of cherry</a></li><li><a href="/more-gibberish">more gibberish</a></li><li><a href="/white-nights-insomnia">white nights insomnia</a></li><li><a href="/gibberish">gibberish</a></li><li><a href="/tired-and-anxious">tired and anxious</a></li><li><a href="/chakra-linux">chakra linux</a></li><li><a href="/wingdns">wingdns</a></li><li><a href="/symbiopsychotaxiplasma">symbiopsychotaxiplasma</a></li><li><a href="/first-day-of-vimwiki">first day of vimwiki</a></li></ul></nav>
+          </div>
+        </div>
+        <div id="page">
+
+          <article class="article">
+            <h1 class="title"><a href="./zsh">Zsh</a></h1>
+            <div class="content"><h2>zsh太棒了啊</h2>
+<p>如题。之前在论坛上看到一人发表用zsh后的感言，真是涕泪俱下，仿佛被bash压迫了三百年
+终于翻身了。今天用了Linuxtoy.org上Kardinal的<code>.zshrc</code>，居然也有类似的感觉。
+
+</p>
+<p>好在哪里呢？
+
+</p>
+<p>首先当然是漂亮了。如图：
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6345879098/" title="2011-11-14-150338_1024x600_scrot by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6215/6345879098_b9a267bd15_z.jpg" width="640" height="375" alt="2011-11-14-150338_1024x600_scrot" /></a>
+
+</p>
+<p>bash 的PS1，在怎么美化也没见过这种效果啊……
+
+</p>
+<p>当然更重要的是贴心，我输入<code>cmo</code>，自动补全出了这么多选择（还有<code>chmod</code>，这个好像和<code>setopt CORRECT</code>无关的），
+用tab键或者方向键导航。
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6345879130/" title="2011-11-14-150423_1024x600_scrot by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6237/6345879130_3f77a96dcd_z.jpg" width="640" height="375" alt="2011-11-14-150423_1024x600_scrot" /></a>
+
+</p>
+<p>关于自动改错(<code>setopt CORRECT</code>)，上一张图：
+
+</p>
+<p><a href="http://www.flickr.com/photos/twzh_ly01/6345151303/" title="2011-11-14-151241_1024x600_scrot by koffeecup, on Flickr"><img src="http://farm7.static.flickr.com/6019/6345151303_89c6a9f1eb_z.jpg" width="640" height="375" alt="2011-11-14-151241_1024x600_scrot" /></a>
+
+</p>
+<p>n=no y=yes a=abort e=edit
+
+</p>
+<p>还有路径别名，我把这个博客html源文件地址文件夹设别名为<code>WWW</code>，每次只需输入<code>cd ~WWW</code>就能从
+任意当前路径进入该目录，比bash里先切到<code>~</code>，再<code>cd wz</code>再tab要方便多了。
+
+</p>
+<p>这个shell自带的补全功能也很强大，可以抛弃原来bash_completion那个东西了，直接的一个好处就是
+shell启动变快了（肉眼能感觉到的快！）。
+
+</p>
+<p>一些找到的相关链接：
+
+</p>
+<p><a href="http://www.ibm.com/developerworks/cn/linux/shell/z/">http://www.ibm.com/developerworks/cn/linux/shell/z/</a>
+<a href="http://www.ibm.com/developerworks/cn/aix/library/au-satzsh.html">http://www.ibm.com/developerworks/cn/aix/library/au-satzsh.html</a>
+<a href="http://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/">http://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/</a>
+当然还有官网：
+<a href="http://www.zsh.org/">http://www.zsh.org/</a>
+
+</p>
+<hr />
+<p>UPDATE:第二篇哲学论文拿了A，可以安心复习数学了。
+
+</p>
+</div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'wztianblog'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             })();
+         </script>
+         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </article>
+
+          <script type="text/javascript" src="/js/jquery.js"></script>
+        </div>
+
+        <footer id="footer">
+          <hr />
+          <p><a href="/">Blacksmith</a></p>
+          <ul>
+            <li>Powered by <a href="http://nodejitsu.com">Nodejitsu</a> / styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a></li>
+          </ul>
+        </footer>
+
+      </div>
+    </div>
+  </body>
+</html>
