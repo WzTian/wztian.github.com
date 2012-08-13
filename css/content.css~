@@ -82,8 +82,8 @@ article h5 {
 article hr {
     border: none;
     border-top: 1px solid #ccc;
-    width: 35%;
-    opacity: 0.3;
+    width: 55%;
+    opacity: 0.9;
 }
 
 article p {
