@@ -87,7 +87,7 @@ article hr {
 }
 
 article p {
-  line-height: 14px; 
+  line-height: 140%; 
   margin: 0 0 1.2em;
 }
 
@@ -129,7 +129,7 @@ article pre {
   color: #63FF00;
   background: #002B36;
   overflow: auto;
-  font: normal 12px "bitstream vera sans mono", monaco "lucida console", "courier new", courier, serif;
+  font: normal 12px "Inconsolata", "bitstream vera sans mono", monaco, "lucida console", "courier new", courier, serif;
   margin: 0.9em 0; padding: 8px;
 }
 
